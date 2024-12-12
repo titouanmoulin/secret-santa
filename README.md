@@ -35,4 +35,4 @@ Normalement le projet contient tous les scripts nécessaires pour le build et le
 
 ## Rendu
 
-Créer un dépot git public et envoyer le lien par mail à l'adresse sur community.
+Créer un dépot git public et envoyer le lien par mail à l'adresse sur community
