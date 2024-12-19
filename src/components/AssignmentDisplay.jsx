@@ -5,7 +5,7 @@ export function AssignmentDisplay({ assignments }) {
     <ul className="space-y-2">
       {assignments.map((assignment, index) => (
         <li key={index}>
-          <span>{assignment.giver}</span> offre un beau cadeau à{" "}
+          <span>{assignment.giver}</span> offre un horrible cadeau à{" "}
           <span>{assignment.receiver}</span>
         </li>
       ))}

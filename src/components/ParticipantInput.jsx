@@ -23,37 +23,41 @@ export function ParticipantInput({
   };
 
   return (
-    <div className="space-y-4">
-      // Champs de saisie pour ajouter un participant
-      <div className="flex space-x-2">
-        <input
-          type="text"
-          className="input flex-grow"
-          placeholder="Entrez un nom"
-          value={currentName}
-          onChange={(e) => setCurrentName(e.target.value)}
-          onKeyPress={(e) => e.key === "Enter" && addParticipant()}
-        />
-        <button className="button" onClick={addParticipant}>
-          Ajouter
-        </button>
-      </div>
-      // Liste des participants ajoutés
-      <ul className="space-y-2">
+    <div className="absolute top-0 h-screen w-screen p-4">
+      <img src="cadeau_gauche.png" alt="cadeau" className="absolute bottom-[12%] left-[5%]" />
+      <img src="cadeau_droite.png" alt="cadeau" className="absolute bottom-[5%] -right-[20%]" />
+      <h2 className="text-3xl font-nextcustom uppercase text-red-700 mb-8 mt-4 text-center">Participants</h2>
+      
+      <ul className="space-y-5 h-[50%] overflow-scroll">
         {participants.map((name, index) => (
-          <li key={index} className="list-item">
-            {name}
+          <li key={index} className="flex gap-4 items-center">
+            <p className="font-nextcustom uppercase text-red-700 text-3xl w-15 text-end">{index + 1}</p>
+            <p className="bg-[url('/texture/carton.jpg')] font-pinkend w-full text-4xl p-2 px-4">{name}</p>
             <div className="space-x-2">
               <button
-                className="text-red-500 hover:text-red-700"
+                className="font-nextcustom uppercase text-red-700 text-3xl hover:text-red-900"
                 onClick={() => onRemoveParticipant(index)}
               >
-                Supprimer
+                x
               </button>
             </div>
           </li>
         ))}
       </ul>
+
+      <div className="flex gap-2 mt-5">
+        <input
+          type="text"
+          className="input flex-grow bg-[url('/texture/carton.jpg')] text-3xl p-2 font-pinkend"
+          placeholder="Entrez un nom"
+          value={currentName}
+          onChange={(e) => setCurrentName(e.target.value)}
+          onKeyPress={(e) => e.key === "Enter" && addParticipant()}
+        />
+        <button className="button bg-[url('/texture/carton.jpg')] text-5xl px-3 font-pinkend z-50 hover:scale-105" onClick={addParticipant}>
+          +
+        </button>
+      </div>
     </div>
   );
 }

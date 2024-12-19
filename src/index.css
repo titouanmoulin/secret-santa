@@ -8,7 +8,10 @@
   If we ever want to remove these styles, we need to add an explicit border
   color utility to any element that depends on these defaults.
 */
+
+
 @layer base {
+
   *,
   ::after,
   ::before,
@@ -16,21 +19,23 @@
   ::file-selector-button {
     border-color: var(--color-gray-200, currentColor);
   }
+  @font-face {
+    font-family: "nextcustom";
+    src: url("/fonts/Nextcustom.ttf") format("truetype");
+    font-weight: 700;
+    font-style: normal;
+}
 
-  /* @font-face {
-    font-family: 'nextcustom';
-    src: url('./fonts/NextCustom.ttf') format('ttf');
-    font-weight: 400;
-  } */
-
-  /* @font-face {
+  @font-face {
     font-family: 'pinkend';
-    src: url('./fonts/Pinkend.ttf') format('ttf');
+    src: url('./fonts/Pinkend.ttf') format('truetype');
     font-weight: 400;
-  }  */
+  } 
 
-  @theme {
-    --font-nextcustom : 'nextcustom';
-    --font-pinkend : 'pinkend';
-  }
+}
+
+@theme {
+  --font-family-nextcustom : "nextcustom";
+  --font-nextcustom : "nextcustom";
+  --font-pinkend : 'pinkend';
 }

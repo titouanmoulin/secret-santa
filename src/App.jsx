@@ -59,17 +59,14 @@ export default function App() {
         )}
         {currentScreen === "input" && (
           <>
-            <h2 className="text-2xl font-bold mb-6 text-center">
-              Ajoutez les participants
-            </h2>
             <ParticipantInput
               onAddParticipant={addParticipant}
               participants={participants}
               onRemoveParticipant={removeParticipant}
             />
-            <div className="mt-6">
-              <button className="button w-full" onClick={distributeGifts}>
-                Distribuer les cadeaux
+            <div className="">
+              <button className="button absolute bg-[url('/texture/carton.jpg')] text-4xl p-2 font-pinkend left-[50%] translate-x-[-50%] bottom-[5%] hover:scale-105" onClick={distributeGifts}>
+                Lancer le tirage
               </button>
             </div>
           </>
