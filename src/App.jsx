@@ -52,7 +52,7 @@ export default function App() {
 
   return (
     <div className="container mx-auto bg-neutral-600 h-screen overflow-hidden">
-      <img src="texture/beton.jpg" alt="beton" className="h-[80%] object-cover" />
+      <img src="texture/beton.jpg" alt="beton" className="h-[80%] object-cover w-full" />
       <div className="">
         {currentScreen === "welcome" && (
           <WelcomeScreen onStart={() => setCurrentScreen("input")} />

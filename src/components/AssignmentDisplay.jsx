@@ -18,6 +18,7 @@ export function AssignmentDisplay({ assignments }) {
 
   return (
     <div className="absolute top-0 h-screen w-screen p-4">
+      <img src="papabourre.png" alt="papabourre" className="absolute bottom-[2%] left-[50%] translate-x-[-50%]" />
       <h2 className="text-2xl font-nextcustom uppercase text-red-700 mb-8 mt-4 text-center">Distribution</h2>
       <ul className="space-y-5 h-[70%] overflow-scroll">
         {assignments.map((assignment, index) => (
