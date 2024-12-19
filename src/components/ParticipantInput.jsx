@@ -26,7 +26,7 @@ export function ParticipantInput({
     <div className="absolute top-0 h-screen w-screen p-4">
       <img src="cadeau_gauche.png" alt="cadeau" className="absolute bottom-[12%] left-[5%]" />
       <img src="cadeau_droite.png" alt="cadeau" className="absolute bottom-[5%] -right-[20%]" />
-      <h2 className="text-3xl font-nextcustom uppercase text-red-700 mb-8 mt-4 text-center">Participants</h2>
+      <h2 className="text-2xl font-nextcustom uppercase text-red-700 mb-8 mt-4 text-center">Participants</h2>
       
       <ul className="space-y-5 h-[50%] overflow-scroll">
         {participants.map((name, index) => (

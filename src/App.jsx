@@ -52,7 +52,7 @@ export default function App() {
 
   return (
     <div className="container mx-auto bg-neutral-600 h-screen overflow-hidden">
-      <img src="texture/beton.jpg" alt="beton" className="h-[80%] object-cover"/>
+      <img src="texture/beton.jpg" alt="beton" className="h-[80%] object-cover" />
       <div className="">
         {currentScreen === "welcome" && (
           <WelcomeScreen onStart={() => setCurrentScreen("input")} />
@@ -73,12 +73,12 @@ export default function App() {
         )}
         {currentScreen === "assignments" && (
           <>
-            <h2 className="text-2xl font-bold mb-6 text-center">
-              Attributions des cadeaux
-            </h2>
             <AssignmentDisplay assignments={assignments} />
             <div className="mt-6">
-              <button className="button w-full" onClick={resetApp}>
+              <button className="button absolute bg-[url('/texture/carton.jpg')] text-5xl px-4 font-pinkend left-[50%] translate-x-[-50%] bottom-[10%] hover:scale-105" onClick={distributeGifts}>
+                Relancer
+              </button>
+              <button className="button absolute bg-[url('/texture/carton.jpg')] text-2xl px-2 font-pinkend left-[50%] translate-x-[-50%] bottom-[3%] hover:scale-105" onClick={resetApp}>
                 Recommencer
               </button>
             </div>
