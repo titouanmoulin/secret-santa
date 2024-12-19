@@ -51,13 +51,12 @@ export default function App() {
   };
 
   return (
-    <div className="container mx-auto p-4">
-      <div>
-        // affiche l'écran en fonction de l'état de l'application // WELCOME
+    <div className="container mx-auto bg-neutral-600 h-screen overflow-hidden">
+      <img src="texture/beton.jpg" alt="beton" className="h-[80%] object-cover"/>
+      <div className="">
         {currentScreen === "welcome" && (
           <WelcomeScreen onStart={() => setCurrentScreen("input")} />
         )}
-        // INPUT
         {currentScreen === "input" && (
           <>
             <h2 className="text-2xl font-bold mb-6 text-center">
@@ -75,7 +74,6 @@ export default function App() {
             </div>
           </>
         )}
-        // ASSIGNMENTS
         {currentScreen === "assignments" && (
           <>
             <h2 className="text-2xl font-bold mb-6 text-center">
